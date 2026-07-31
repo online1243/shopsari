@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Us on WhatsApp</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '928496683603859');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=928496683603859&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Landing Page Styling -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 350px;
+            width: 90%;
+        }
+        .dp-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #25D366;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333333;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+            transition: background 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #22bf5b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Uper DP -->
+        <div class="dp-container">
+            <img src="https://i.pinimg.com/1200x/59/f0/e5/59f0e5c65d369a2a54b84be97e8534a3.jpg" alt="Profile DP">
+        </div>
+        
+        <h2>Connect with Us</h2>
+        <p>Order With WhatsApp</p>
+
+        <!-- Center Me WhatsApp Button -->
+        <a href="https://wa.me/919509781700?text=Hi,%20I%20want%20to%20order%20this!!" 
+           target="_blank" 
+           class="whatsapp-btn"
+           onclick="trackWhatsAppLead()">
+           Open WhatsApp
+        </a>
+    </div>
+
+    <!-- Meta Pixel Tracking Script for WhatsApp Click -->
+    <script>
+    function trackWhatsAppLead() {
+        if (typeof fbq === 'function') {
+            // Yeh aapke Meta Pixel par 'Lead' event bhejega
+            fbq('track', 'Lead', {
+                content_name: 'WhatsApp Landing Page Click',
+                phone_number: '+919509781700'
+            });
+        }
+    }
+    </script>
+
+</body>
+</html>
